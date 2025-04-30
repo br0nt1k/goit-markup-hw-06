@@ -277,7 +277,7 @@ button {
         max-width: 768px;
     }
 
-    .hero-h {
+    .hero-ttl {
         font-size: 56px;
         max-width: 496px;
         margin-bottom: 36px;
@@ -286,13 +286,13 @@ button {
 
 @media screen and (min-width: 1158px) {
     .hero {
-            padding: 188px 0;
-            max-width: 1440px;
-        }
+        padding: 188px 0;
+        max-width: 1440px;
+    }
     
-        .hero-h {
-            margin-bottom: 48px;
-        }
+    .hero-ttl {
+        margin-bottom: 48px;
+    }
 }
 
 .benefits {
@@ -313,7 +313,7 @@ button {
     display: none;
 }
 
-.benefits-h {
+.benefits-ttl {
     margin-bottom: 8px;
     font-weight: 700;
     font-size: 36px;
@@ -323,7 +323,7 @@ button {
     text-align: center;
 }
 
-.benefits-p {
+.benefits-text {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -340,7 +340,7 @@ button {
         width: calc((100% - 24px) / 2);
     }
 
-    .benefits-h {
+    .benefits-ttl {
         text-align: start;
     }
 
@@ -370,22 +370,15 @@ button {
         margin-bottom: 8px;
     }
 
-    .benefits-h {
-        margin-bottom: 8px;
+    .benefits-ttl {
         font-weight: 500;
         font-size: 20px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
         text-align: start;
     }
     
-    .benefits-p {
+    .benefits-text {
         font-weight: 400;
         font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #434455;
     }
 }
 
@@ -408,14 +401,89 @@ button {
 .team-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 72px;
 }
 
-.thirdsection-ul-li {
+.team-item {
     background-color: #fff;
-    width: 100%;
+    width: calc(100% - 24px);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.team-card {
+    padding: 32px 0;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.card-item {
+    fill: none;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    column-gap: 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon {
+    fill: #f4f4fd;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #404bbf;
+}
+
+.card-ttl {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px){
+    .team-list {
+        gap: 24px;
+    }
+
+    .team-item {
+    width: calc((100% - 240px)  / 2);
+    }
+}
+
+@media screen and (min-width: 1158px){
+    .team{
+        padding: 120px 0;
+    }
+
+    .team-item {
+        width: calc((100% - 72px) / 4);
+    }
 }
